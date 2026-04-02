@@ -1,4 +1,4 @@
-const CACHE_NAME = 'anime-cristao-v3';
+const CACHE_NAME = 'anime-cristao-v4';
 const urlsToCache = [
   './',
   './index.html',
@@ -6,6 +6,7 @@ const urlsToCache = [
   './script.js',
   './story_data.js',
   './manifest.json',
+  './assets/audio/bg_music.mp3',
   './assets/images/heaven_bg.png',
   './assets/images/lucifer_angel.png',
   './assets/images/lucifer_fallen.png',
