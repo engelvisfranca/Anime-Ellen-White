@@ -134,21 +134,21 @@ function jumpToChapter(chapterId) {
     closeChapterMenu();
     // If viewer is hidden (still on title), open it
     if (viewer.style.display === 'none' || !viewer.style.display) {
+      tryAutoMusic(); // MUST be called synchronously with click event
       titleScreen.style.display = 'none';
       viewer.style.display = 'flex';
-      tryAutoMusic();
     }
   }
 }
 
 // ---------- START STORY ----------
 function startStory() {
+  tryAutoMusic(); // MUST be called synchronously on button click
   titleScreen.style.animation = 'scene-fade 0.6s ease reverse forwards';
   setTimeout(() => {
     titleScreen.style.display = 'none';
     viewer.style.display = 'flex';
     renderScene(currentIndex);
-    tryAutoMusic();
   }, 600);
 }
 
@@ -345,11 +345,18 @@ function speakSceneText(text) {
   
   currentUtterance = new SpeechSynthesisUtterance(cleanText);
   currentUtterance.lang = 'pt-BR';
-  currentUtterance.rate = 0.95; // slightly dramatic pacing
+  currentUtterance.rate = 1.05; // Slightly faster for fluidity
+  currentUtterance.pitch = 1.15; // Slightly higher pitch for a young/jovial tone
   
-  // Try to pick a standard PT-BR voice
+  // Try to pick the most natural PT-BR voice available
   const voices = speechSynthesis.getVoices();
-  const ptVoice = voices.find(v => v.lang.startsWith('pt-BR'));
+  let ptVoice = voices.find(v => v.lang.startsWith('pt-BR') && (v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google') || v.name.includes('Premium')));
+  
+  // Fallback to any PT-BR voice if a premium one isn't found
+  if (!ptVoice) {
+    ptVoice = voices.find(v => v.lang.startsWith('pt-BR'));
+  }
+  
   if (ptVoice) {
     currentUtterance.voice = ptVoice;
   }
