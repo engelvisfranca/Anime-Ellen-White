@@ -70,15 +70,15 @@ const STORY_DATA = {
       id: 3, title: "A Rebeldia Cresce", chapterNumber: "Capítulo III",
       coverBg: "heaven_bg", coverIcon: "🔥",
       scenes: [
-        { id:"c3s1", background:"heaven_bg", character:"lucifer_angel", characterPosition:"center",
+        { id:"c3s1", background:"heaven_bg", bgFilter:"sepia(0.3) saturate(0.8) hue-rotate(250deg) brightness(0.8)", character:"lucifer_angel", characterPosition:"center",
           narration:"Lúcifer começou a trabalhar em segredo. Com palavras suaves e raciocínios enganosos, ele foi conquistando corações de anjos que nunca imaginariam questionar a autoridade divina.",
           quote:{ text:"\"A rebelião de Satanás, como um câncer maligno, se espalhara por uma grande empresa de anjos.\"", source:"— Historia da Redenção, Cap. 1" },
           animation:"spread-darkness" },
-        { id:"c3s2", background:"heaven_bg", character:"lucifer_fallen", characterPosition:"center",
+        { id:"c3s2", background:"heaven_bg", bgFilter:"sepia(0.5) saturate(0.5) hue-rotate(270deg) brightness(0.6)", character:"lucifer_fallen", characterPosition:"center",
           narration:"À medida que a rebeldia avançava, a verdadeira natureza de Lúcifer começou a aparecer. A luz que o envolvia foi se apagando gradualmente, revelando a escuridão que havia tomado seu coração.",
           quote:{ text:"\"Satanás não revelava seus planos reais; ele disfarçava seus motivos com aparência de lealdade a Deus.\"", source:"— Historia da Redenção, Cap. 1" },
           animation:"transform-dark" },
-        { id:"c3s3", background:"heaven_bg", character:"christ_character", characterPosition:"right",
+        { id:"c3s3", background:"heaven_bg", bgFilter:"sepia(0.2) saturate(1.1) brightness(0.9)", character:"christ_character", characterPosition:"right",
           narration:"Deus, em Sua misericórdia, enviou Cristo para tentar restaurar Lúcifer. Mas o orgulho havia endurecido o coração do querubim caído — ele não queria ser salvo, queria ser adorado.",
           quote:{ text:"\"Deus não poderia ser feliz vendo os anjos caídos sofrerem. Ele desejava vê-los como eram para recuperar a alegria do céu.\"", source:"— Historia da Redenção, Cap. 1" },
           animation:"plea-scene" }
@@ -115,15 +115,15 @@ const STORY_DATA = {
       id: 5, title: "A Grande Expulsão", chapterNumber: "Capítulo V",
       coverBg: "war_heaven", coverIcon: "🌑",
       scenes: [
-        { id:"c5s1", background:"war_heaven", character:"lucifer_fallen", characterPosition:"center",
+        { id:"c5s1", background:"war_heaven", bgFilter:"grayscale(0.8) sepia(0.2) hue-rotate(200deg) brightness(0.6)", character:"lucifer_fallen", characterPosition:"center",
           narration:"Lúcifer foi derrotado. Ele e seus anjos foram expulsos do céu. O ser que havia sido o mais brilhante dos céus agora caía como raio — transformado em Satanás, o adversário.",
           quote:{ text:"\"E foi lançado fora o grande dragão, a antiga serpente, chamado o Diabo e Satanás, o qual engana todo o mundo.\" — Apocalipse 12:9", source:"— Historia da Redenção, Cap. 2" },
           animation:"fall-cast-out" },
-        { id:"c5s2", background:"heaven_bg", character:"christ_character", characterPosition:"center",
+        { id:"c5s2", background:"heaven_bg", bgFilter:"contrast(1.2) brightness(1.3)", character:"christ_character", characterPosition:"center",
           narration:"Mas a história não terminou aí. A queda de Satanás abriu uma nova fase no grande conflito — e na misericórdia de Deus, um plano de redenção para todos os que seriam afetados pelo pecado estava prestes a se desdobrar.",
           quote:{ text:"\"Cristo declarou que estivera com o Pai antes de Abraão ser, e foi-Lhe dado um nome acima de todo o nome.\"", source:"— Historia da Redenção, Cap. 3" },
           animation:"hope-dawn" },
-        { id:"c5s3", background:"god_throne", character:null, characterPosition:null,
+        { id:"c5s3", background:"god_throne", bgFilter:"saturate(1.5) brightness(1.2)", character:null, characterPosition:null,
           narration:"O pecado havia entrado no universo. Mas Deus, em Seu amor eterno, já havia preparado a resposta — a maior história de amor e redenção que o cosmos jamais testemunharia.",
           quote:{ text:"\"Deus amou de tal maneira o mundo, que deu o Seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.\" — João 3:16", source:"— Historia da Redenção" },
           animation:"eternal-light" }
@@ -166,25 +166,25 @@ const STORY_DATA = {
       id: 7, title: "A Tentação e a Queda", chapterNumber: "Capítulo VII",
       coverBg: "war_heaven", coverIcon: "🐍",
       scenes: [
-        { id:"c7s1", background:"war_heaven", character:"lucifer_fallen", characterPosition:"left",
-          narration:"Satanás observava o paraíso com ódio e inveja. Expulso do céu, ele agora tramava a destruição daquilo que Deus mais amava — os seres humanos criados à Sua imagem.",
+        { id:"c7s1", background:"war_heaven", bgFilter:"sepia(0.8) hue-rotate(-20deg) saturate(1.8) brightness(0.6)", character:"lucifer_fallen", characterPosition:"left",
+          narration:"Satanás observava o paraíso com ódio e inveja. Expulso do céu, ele agora tramava a destruição daquilo que Deus mais amava.",
           quote:{ text:"\"Satanás determinou entrar nesse mundo e tentar, enganar e arruinar Adão e Eva.\"", source:"— Historia da Redenção, Cap. 4" },
           animation:"dark-aura" },
-        { id:"c7s2", background:"heaven_bg", character:"lucifer_fallen", characterPosition:"right",
+        { id:"c7s2", background:"heaven_bg", bgFilter:"sepia(0.7) hue-rotate(-40deg) saturate(2) brightness(0.5) contrast(1.2)", character:"lucifer_fallen", characterPosition:"right",
           dialogues:[
-            { speaker:"Satanás", text:"Deus sabe que, no dia em que comerdes, vossos olhos se abrirão e sereis como Deus..." },
-            { speaker:"Narrador", text:"Eva hesitou... mas a fruta era bela. E as palavras da serpente pareciam sábias. Ela estendeu a mão." }
+            { speaker:"Satanás", text:"Deus sabe que, no dia em que comerdes da árvore, vossos olhos se abrirão e sereis como Deus..." },
+            { speaker:"Narrador", text:"Eva hesitou... mas a fruta era bela. E as palavras da serpente (Satanás disfarçado) pareciam sábias. Ela estendeu a mão." }
           ],
           quote:{ text:"\"Satanás apresentou Deus como ocultando-lhes o conhecimento para mantê-los dependentes. Insinuou que Deus era egoísta.\"", source:"— Historia da Redenção, Cap. 5" },
           animation:"shadow-creep" },
-        { id:"c7s3", background:"war_heaven", character:null, characterPosition:null,
-          narration:"Eva comeu. Deu a Adão. E ele também comeu. No mesmo instante, algo mudou — a inocência foi perdida. A glória que os cercava desbotou. O frio da culpa chegou pela primeira vez.",
+        { id:"c7s3", background:"heaven_bg", bgFilter:"grayscale(0.9) brightness(0.4) sepia(0.2)", character:null, characterPosition:null,
+          narration:"Eva comeu. Deu a Adão. E ele também comeu. No mesmo instante, algo mudou — a inocência foi perdida. O verde do Éden desbotou. O frio da culpa e do medo chegou pela primeira vez.",
           quote:{ text:"\"Quando Adão e Eva pecaram, perderam a glória radiante que os havia coberto como vestes.\"", source:"— Historia da Redenção, Cap. 5" },
           animation:"transform-dark" },
-        { id:"c7s4", background:"god_throne", character:"christ_character", characterPosition:"center",
+        { id:"c7s4", background:"god_throne", bgFilter:"contrast(1.5) brightness(0.6)", character:null, characterPosition:null,
           dialogues:[
             { speaker:"Deus", text:"Adão, onde estás?" },
-            { speaker:"Narrador", text:"Pela primeira vez, o homem se escondeu de Deus. O pecado havia criado um abismo — uma separação que só o sacrifício supremo poderia preencher." }
+            { speaker:"Narrador", text:"Pela primeira vez, o homem se escondeu de Deus. O pecado havia criado um abismo — uma separação mortal." }
           ],
           quote:{ text:"\"A transgressão de Satanás havia lançado desonra sobre Deus e tristeza sobre o céu.\"", source:"— Historia da Redenção, Cap. 5" },
           animation:"confrontation" }
@@ -198,23 +198,23 @@ const STORY_DATA = {
       id: 8, title: "A Promessa da Redenção", chapterNumber: "Capítulo VIII",
       coverBg: "god_throne", coverIcon: "✝️",
       scenes: [
-        { id:"c8s1", background:"god_throne", character:"christ_character", characterPosition:"center",
+        { id:"c8s1", background:"god_throne", bgFilter:"saturate(0.5) brightness(0.6)", character:"christ_character", characterPosition:"center",
           narration:"Mas Deus não abandonou Sua criação. Antes mesmo que a voz divina pronunciasse o julgamento, havia esperança. No plano eterno de Deus, a redenção já havia sido preparada.",
           quote:{ text:"\"Cristo seria o cordeiro imolado desde a fundação do mundo.\" — Apocalipse 13:8", source:"— Historia da Redenção, Cap. 6" },
           animation:"hope-dawn" },
-        { id:"c8s2", background:"heaven_bg", character:"christ_character", characterPosition:"right",
+        { id:"c8s2", background:"war_heaven", bgFilter:"sepia(1) hue-rotate(-50deg) saturate(2) brightness(0.4) contrast(1.5)", character:"christ_character", characterPosition:"right",
           dialogues:[
-            { speaker:"Cristo", text:"Pai, eu me ofereço. Deixa-me ir ao mundo. Deixa-me vestir a natureza humana e pagar o preço que o pecado exige." },
-            { speaker:"Narrador", text:"O Filho de Deus, o Criador de mundos, escolheu voluntariamente descer e tomar sobre Si a maldição do pecado — para que os filhos de Adão pudessem ser livres." }
+            { speaker:"Cristo", text:"Pai, eu me ofereço. Deixa-me ir ao mundo. Deixa-me tomar sobre mim a maldição do pecado." },
+            { speaker:"Narrador", text:"O Filho de Deus escolheu virar as costas para a glória de Seu trono para descer à escuridão da Terra, prometendo dar a Sua vida numa cruz para resgatar os caídos." }
           ],
           quote:{ text:"\"Cristo propôs tornar-Se o fiador da humanidade, tomar sobre Si a penalidade do pecado humano.\"", source:"— Historia da Redenção, Cap. 6" },
           animation:"glow-pulse" },
-        { id:"c8s3", background:"heaven_bg", character:null, characterPosition:null,
-          narration:"A promessa foi dada ainda no Éden — a semente da mulher esmagaria a cabeça da serpente. Era a primeira proclamação do Evangelho, sussurrada em meio à escuridão do primeiro pecado.",
+        { id:"c8s3", background:"war_heaven", bgFilter:"sepia(0.5) hue-rotate(-30deg) saturate(1.2) brightness(0.9)", character:null, characterPosition:null,
+          narration:"A promessa foi dada ainda no Éden escurecido — a semente da mulher esmagaria a cabeça da serpente. A primeira proclamação do Evangelho.",
           quote:{ text:"\"E porei inimizade entre ti e a mulher, e entre a tua semente e a sua semente; esta te ferirá a cabeça.\" — Gênesis 3:15", source:"— Historia da Redenção, Cap. 6" },
           animation:"eternal-light" },
-        { id:"c8s4", background:"god_throne", character:"christ_character", characterPosition:"center",
-          narration:"O universo assistia em reverência. O grande conflito que começou no céu com o orgulho de Lúcifer seria resolvido, não pela força, mas pelo amor supremo de Deus manifestado em Cristo.",
+        { id:"c8s4", background:"god_throne", bgFilter:"brightness(1.5) contrast(1.2) saturate(1.8)", character:"christ_character", characterPosition:"center",
+          narration:"O universo assistia em reverência. O grande conflito seria resolvido não pela força, mas pelo sacrifício de sangue provado pelo amor supremo na cruz.",
           quote:{ text:"\"O sacrifício de Cristo é o tema central dos anjos e dos santos redimidos por toda a eternidade.\"", source:"— Historia da Redenção" },
           animation:"hope-dawn", isEnding: true }
       ]
