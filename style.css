@@ -466,11 +466,26 @@ html, body {
 #narration-text::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
 
 /* ---- RESPONSIVO ---- */
-@media (max-width: 600px) {
-  #dialogue-panel { padding: 0.8rem 1rem 1rem; min-height: 160px; }
+@media (max-width: 768px) {
+  #dialogue-panel { 
+    padding: 1rem 1rem 4.5rem 1rem; 
+    min-height: 160px; 
+    max-height: 50vh;
+    overflow-y: auto;
+  }
   #character-img { max-width: 55%; }
-  #controls { bottom: 1rem; right: 1rem; }
-  .btn-nav { padding: 0.5rem 0.9rem; font-size: 0.7rem; }
+  #controls { 
+    bottom: 0.5rem; 
+    right: 1rem; 
+    left: 1rem;
+    justify-content: space-between;
+  }
+  .btn-nav { 
+    padding: 0.6rem 1.2rem; 
+    font-size: 0.8rem; 
+    background: rgba(13,7,32,0.95);
+    backdrop-filter: blur(5px);
+  }
 }
 
 @media (max-width: 400px) {

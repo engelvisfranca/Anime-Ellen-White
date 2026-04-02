@@ -1,4 +1,4 @@
-const CACHE_NAME = 'anime-cristao-v1';
+const CACHE_NAME = 'anime-cristao-v3';
 const urlsToCache = [
   './',
   './index.html',
